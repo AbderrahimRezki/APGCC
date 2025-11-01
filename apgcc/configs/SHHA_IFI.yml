@@ -9,7 +9,7 @@ VIS: False                                  # vis the predict sample
 # -----------------------------------------------------------------------------
 MODEL:
   ENCODER: 'vgg16_bn'                       # backbone, select: ['vgg16', 'vgg16_bn', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152']
-  ENCODER_kwargs: {"last_pool": False}      # last layer downsample, False:feat4(H/16,W/16), True:feat4(H/32,W/32)                            
+  ENCODER_kwargs: {"last_pool": False, "backbone_path": None}      # last layer downsample, False:feat4(H/16,W/16), True:feat4(H/32,W/32)                            
   DECODER: 'IFI'                            # decoder, select: ['basic', 'IFI']
   DECODER_kwargs: {"num_classes": 2,        # output num_classes, default:2 means confindence.
                   "inner_planes": 64,       # default: basic: 256, IFI: 64
